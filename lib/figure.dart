@@ -52,21 +52,9 @@ class Trapeze{
 
   double get long => _long;
 
-  // set long(double clue) {
-  //   _long = clue;
-  // }
-
   double get short => _short;
 
-  // set short(double leg) {
-  //   _short = leg;
-  // }
-
   double get altitude => _altitude;
-
-  // set altitude(double hand) {
-  //   _altitude = hand;
-  // }
 
   Trapeze({double clue, double leg, double hand}){
     this._long = clue;
