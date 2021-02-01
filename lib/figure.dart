@@ -1,10 +1,10 @@
 import 'dart:math';
 void main() {
-  final Square square = Square(value: 10);
+  final Square square = new Square(value: 10);
   printArea(square);
-  final Shape circle = Circle(value: 5);
+  final Shape circle = new Circle(value: 5);
   printArea(circle);
-  final Trapeze trapeze = Trapeze(clue: 13, leg: 7, hand: 5);
+  final Trapeze trapeze = new Trapeze(clue: 13, leg: 7, hand: 5);
   print(trapeze.area());
 }
 

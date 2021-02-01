@@ -1,11 +1,11 @@
 void main() {
-  final Addition addition = Addition(n: 7, m: 6);
+  final Addition addition = new Addition(n: 7, m: 6);
   print(addition.calc());
-  final Subtraction subtraction = Subtraction(n: 7, m: 6);
+  final Subtraction subtraction = new Subtraction(n: 7, m: 6);
   print(subtraction.calc());
-  final Multiplication multiplication = Multiplication(n: 7, m: 6);
+  final Multiplication multiplication = new Multiplication(n: 7, m: 6);
   print(multiplication.calc());
-  final Division division = Division(n: 7, m: 6);
+  final Division division = new Division(n: 7, m: 6);
   print(division.calc());
 
 }
