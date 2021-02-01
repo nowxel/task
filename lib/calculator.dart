@@ -1,12 +1,12 @@
 void main() {
-  final Plus plus = Plus(num1: 7, num2: 6);
-  print(plus.calc());
-  final Minus minus = Minus(num1: 7, num2: 6);
-  print(minus.calc());
-  final Multiply multiply = Multiply(num1: 7, num2: 6);
-  print(multiply.calc());
-  final Divide divide = Divide(num1: 7, num2: 6);
-  print(divide.calc());
+  final Addition addition = Addition(n: 7, m: 6);
+  print(addition.calc());
+  final Subtraction subtraction = Subtraction(num1: 7, num2: 6);
+  print(subtraction.calc());
+  final Multiplication multiplication = Multiplication(num1: 7, num2: 6);
+  print(multiplication.calc());
+  final Division division = Division(n: 7, m: 6);
+  print(division.calc());
 
 }
 
@@ -14,51 +14,58 @@ abstract class Calc{
   double calc();
 }
 
-class Plus{
-  double num1;
-  double num2;
+class Addition{
+  double _num1;
+  double _num2;
 
-  Plus({this.num1, this.num2});
+  Addition({double n, double m}){
+    this._num1 = n;
+    this._num2 = m;
+  }
 
   double calc(){
-    return num1 + num2;
+    return _num1 + _num2;
   }
 }
 
-class Minus{
+class Subtraction{
   double num1;
   double num2;
 
-  Minus({this.num1, this.num2});
+  Subtraction({this.num1, this.num2});
 
   double calc(){
     return num1 - num2;
   }
 }
 
-class Divide{
+class Multiplication{
   double num1;
   double num2;
 
-  Divide({this.num1, this.num2});
-
-  double calc(){
-    return num1 / num2;
-  }
-}
-
-class Multiply{
-  double num1;
-  double num2;
-
-  Multiply({this.num1, this.num2});
+  Multiplication({this.num1, this.num2});
 
   double calc(){
     return num1 * num2;
   }
 }
 
+class Division{
+  double _num1;
+  double _num2;
 
+  double get num1 => _num1;
+  double get num2 => _num2;
+
+  Division({double n, double m}){
+    this._num1 = n;
+    this._num2 = m;
+  }
+
+  double calc(){
+    return _num1 / _num2;
+  }
+}
 
 
 
