@@ -2,9 +2,9 @@ import 'dart:math';
 void main() {
   final Square square = Square(slice: 10);
   printArea(square);
-  final Shape circle = Circle(radius: 5);
+  final Shape circle = Circle(value: 5);
   printArea(circle);
-  final Trapeze trapeze = Trapeze(long: 13, short: 7, altitude: 5);
+  final Trapeze trapeze = Trapeze(clue: 13, leg: 7, hand: 5);
   print(trapeze.area());
 }
 
@@ -31,24 +31,50 @@ class Square implements Shape{
 }
 
 class Circle implements Shape {
-  final double radius;
+  double _radius;
 
-  Circle({this.radius});
+  double get radius => _radius;
+
+  Circle({double value}){
+    this._radius = value;
+  }
 
   @override
   double area() {
-    return radius * radius * pi;
+    return _radius * _radius * pi;
   }
 }
 
 class Trapeze{
-  final double long;
-  final double short;
-  final double altitude;
+  double _long;
+  double _short;
+  double _altitude;
 
-  Trapeze({this.long, this.short, this.altitude});
+  double get long => _long;
+
+  set long(double clue) {
+    _long = clue;
+  }
+
+  double get short => _short;
+
+  set short(double leg) {
+    _short = leg;
+  }
+
+  double get altitude => _altitude;
+
+  set altitude(double hand) {
+    _altitude = hand;
+  }
+
+  Trapeze({double clue, double leg, double hand}){
+    this._long = clue;
+    this._short = leg;
+    this._altitude = hand;
+  }
 
   double area(){
-    return (long + short) / 2 * altitude;
+    return (_long + _short) / 2 * _altitude;
   }
 }
