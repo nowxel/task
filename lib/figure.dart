@@ -1,6 +1,6 @@
 import 'dart:math';
 void main() {
-  final Square square = Square(slice: 10);
+  final Square square = Square(value: 10);
   printArea(square);
   final Shape circle = Circle(value: 5);
   printArea(circle);
@@ -21,8 +21,8 @@ class Square implements Shape{
 
   double get side => _side;
 
-  Square({double slice}) {
-    this._side = slice;
+  Square({double value}) {
+    this._side = value;
   }
 
   double area() {
@@ -52,21 +52,21 @@ class Trapeze{
 
   double get long => _long;
 
-  set long(double clue) {
-    _long = clue;
-  }
+  // set long(double clue) {
+  //   _long = clue;
+  // }
 
   double get short => _short;
 
-  set short(double leg) {
-    _short = leg;
-  }
+  // set short(double leg) {
+  //   _short = leg;
+  // }
 
   double get altitude => _altitude;
 
-  set altitude(double hand) {
-    _altitude = hand;
-  }
+  // set altitude(double hand) {
+  //   _altitude = hand;
+  // }
 
   Trapeze({double clue, double leg, double hand}){
     this._long = clue;

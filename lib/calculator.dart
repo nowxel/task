@@ -1,9 +1,9 @@
 void main() {
   final Addition addition = Addition(n: 7, m: 6);
   print(addition.calc());
-  final Subtraction subtraction = Subtraction(num1: 7, num2: 6);
+  final Subtraction subtraction = Subtraction(n: 7, m: 6);
   print(subtraction.calc());
-  final Multiplication multiplication = Multiplication(num1: 7, num2: 6);
+  final Multiplication multiplication = Multiplication(n: 7, m: 6);
   print(multiplication.calc());
   final Division division = Division(n: 7, m: 6);
   print(division.calc());
@@ -29,24 +29,30 @@ class Addition{
 }
 
 class Subtraction{
-  double num1;
-  double num2;
+  double _num1;
+  double _num2;
 
-  Subtraction({this.num1, this.num2});
+  Subtraction({double n, double m}){
+    this._num1 = n;
+    this._num2 = m;
+  }
 
   double calc(){
-    return num1 - num2;
+    return _num1 - _num2;
   }
 }
 
 class Multiplication{
-  double num1;
-  double num2;
+  double _num1;
+  double _num2;
 
-  Multiplication({this.num1, this.num2});
+  Multiplication({double n, double m}){
+    this._num1 = n;
+    this._num2 = m;
+  }
 
   double calc(){
-    return num1 * num2;
+    return _num1 * _num2;
   }
 }
 
