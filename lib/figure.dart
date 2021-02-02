@@ -4,8 +4,8 @@ void main() {
   printArea(square);
   final Shape circle = new Circle(value: 5);
   printArea(circle);
-  final Trapeze trapeze = new Trapeze(clue: 13, leg: 7, hand: 5);
-  print(trapeze.area());
+  final Shape trapeze = new Trapeze(clue: 13, leg: 7, hand: 5);
+  printArea(trapeze);
 }
 
 void printArea(Shape shape){
@@ -45,7 +45,7 @@ class Circle implements Shape {
   }
 }
 
-class Trapeze{
+class Trapeze implements Shape{
   double _long;
   double _short;
   double _altitude;

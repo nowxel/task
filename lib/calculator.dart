@@ -1,20 +1,24 @@
 void main() {
-  final Addition addition = new Addition(n: 7, m: 6);
+  final Calc addition = new Addition(n: 7, m: 6);
   print(addition.calc());
-  final Subtraction subtraction = new Subtraction(n: 7, m: 6);
+  final Calc subtraction = new Subtraction(n: 7, m: 6);
   print(subtraction.calc());
-  final Multiplication multiplication = new Multiplication(n: 7, m: 6);
+  final Calc multiplication = new Multiplication(n: 7, m: 6);
   print(multiplication.calc());
-  final Division division = new Division(n: 7, m: 6);
+  final Calc division = new Division(n: 7, m: 6);
   print(division.calc());
 
+}
+
+void printCalc(Calc calculator){
+  print(calculator.calc());
 }
 
 abstract class Calc{
   double calc();
 }
 
-class Addition{
+class Addition implements Calc{
   double _num1;
   double _num2;
 
@@ -28,7 +32,7 @@ class Addition{
   }
 }
 
-class Subtraction{
+class Subtraction implements Calc{
   double _num1;
   double _num2;
 
@@ -42,7 +46,7 @@ class Subtraction{
   }
 }
 
-class Multiplication{
+class Multiplication implements Calc{
   double _num1;
   double _num2;
 
@@ -56,7 +60,7 @@ class Multiplication{
   }
 }
 
-class Division{
+class Division implements Calc{
   double _num1;
   double _num2;
 
