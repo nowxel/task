@@ -1,12 +1,12 @@
 void main() {
   final Calc addition = new Addition(n: 7, m: 6);
-  print(addition.calc());
+  printCalc(addition);
   final Calc subtraction = new Subtraction(n: 7, m: 6);
-  print(subtraction.calc());
+  printCalc(subtraction);
   final Calc multiplication = new Multiplication(n: 7, m: 6);
-  print(multiplication.calc());
+  printCalc(multiplication);
   final Calc division = new Division(n: 7, m: 6);
-  print(division.calc());
+  printCalc(division);
 
 }
 
